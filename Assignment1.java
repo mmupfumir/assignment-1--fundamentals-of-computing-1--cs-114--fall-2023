@@ -1,4 +1,5 @@
 // Import libraries here
+import java.util.Random;
 import java.util.Scanner;
 
 public class Assignment1 {
@@ -24,30 +25,25 @@ public class Assignment1 {
 
     //prompt user for 5 character string
     System.out.print("Please enter a 5-character string: ");
+      String input = scanner.nextLine();
 
-        String input = scanner.nextLine();
+      StringBuilder reversed = new StringBuilder(input).reverse();
 
-        scanner.close();
-
-        if (input.length() == 5) 
+        if (input.length() >= 3) 
         {
-          //reverse 5 character string
-          String reversedString = reverseString(input);
-          //print reversed string
-          System.out.println(reversedString);
+          String reversedString;
+          input = reversedString.substring(1, input.length() - 1);
         } 
         else 
         {
             System.out.println("Invalid input... Please enter exactly 5 characters");
         }
-    //made function to reverse string
-    public static String reverseString(String input) {
-      StringBuilder reversed = new StringBuilder(input).reverse();
 
-      //convert StrignBuilder back to a string
-      return reversed.toString();
-    }
-  }
+      Random random = new Random();
+        int randomNumber = random.nextInt(16353) + 32;
+
+        // Combined the results and print them to complete the program
+        System.out.println("Result: " + celsius + input + randomNumber);
   scanner.close();
   }
 }
