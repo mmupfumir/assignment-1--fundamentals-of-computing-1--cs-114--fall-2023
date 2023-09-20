@@ -31,7 +31,7 @@ public class Assignment1 {
         StringBuilder reversedString = new StringBuilder(input).reverse();
         if (input.length() >= 3) {
             input = reversedString.substring(1, input.length() - 1);
-
+        }
         // Generate a random number between 32 and 16,384
         Random random = new Random();
         int randomNumber = random.nextInt(16353) + 32;
