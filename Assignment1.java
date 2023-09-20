@@ -16,14 +16,11 @@ public class Assignment1 {
     Scanner scanner = new Scanner(System.in);
     
     System.out.print("Please enter a temperature in Farenheit: ");
-    
-      double Farenheit = scanner.nextDouble();
-      
-      scanner.close();
+    double Farenheit = scanner.nextDouble();
+    //consumes any new line characters
+    scanner.nextLine();
     //convert farenheit to celsius
     double celsius = (Farenheit - 32) * 5.0/9.0;
-    
-    System.out.println(celsius);
 
     //prompt user for 5 character string
     System.out.print("Please enter a 5-character string: ");
@@ -51,8 +48,6 @@ public class Assignment1 {
       return reversed.toString();
     }
   }
-
-  private static String reverseString(String input) {
-    return null;
+  scanner.close();
   }
 }
